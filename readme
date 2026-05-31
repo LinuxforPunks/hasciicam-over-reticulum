@@ -1,11 +1,10 @@
-HEALTH WARNING: don't just run these, they were a proof-of-concept
+HEALTH WARNING: don't just run these, they are likely to over-flood the local mesh
 
-EXAMPLE: nomadnetwork://cdfa7292616244aff682bdcc073ef161:/page/camera.mu       (manual reload only)
+EXAMPLE: nomadnetwork://cdfa7292616244aff682bdcc073ef161:/page/camera.mu
 
 TO WATCH THIS CAMERA: python3 watch_stream.py dcd22b490132414be19f3d08b5d13560   (the command must say the hash of a broadcasting webcam)
 
-DEPENDENCIES (as far as I remember):-
-
+DEPENDENCIES
 reticulum
 nomadnet*
 python3
