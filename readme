@@ -1,0 +1,18 @@
+HEALTH WARNING: don't just run these, they were a proof-of-concept
+
+LIVE EXAMPLE: cdfa7292616244aff682bdcc073ef161:/page/camera.mu
+
+DEPENDENCIES (as far as I remember):-
+
+reticulum
+nomadnet*
+python3
+hasciicam - https://github.com/dyne/HasciiCam
+
+The clients don't need hasciicam, just a working reticulum instance and a viewer script
+
+Nomadnet I think wasn't needed. It wants a full terminal environment and negotiates for one with the client, which can't be done rapidly enough so it hangs
+Because Reticulum limits packets to 500 bytes even Hasciicam frames need to be sent as chunks. My hasciicam command is hasciicam -m text -s 640x480 -r 0.5 -b 100 -c 100 -g 100 -I -o /tmp/livecam.txt & which is basically 640x480 and 2 frames / second
+Reticulum's actual messaging assumes a sender-and-receiver with encryption keys, so the only way I could find was LXFM Broadcasts
+
+
